@@ -17,10 +17,14 @@ See also: [Package-Atlassian](https://bitbucket.org/atlassian/atlasboard/wiki/Pa
 * Install Visual Studio Express if on windows to deal with python C++ complie... Yes I know...
 
 Install Atlasboard by opening the npm console and running the following command.
-``` npm install -g atlasboard ```
+``` 
+npm install -g atlasboard 
+```
 
 Navigate to the directory you want the dashboard in. 
-``` atlasboard new cooldashboardname ```
+``` 
+atlasboard new cooldashboardname 
+```
 
 Start the Dashboard on the port you want (3333 below)
 ```
