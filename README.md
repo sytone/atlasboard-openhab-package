@@ -25,14 +25,17 @@ Navigate to the directory you want the dashboard in.
 ``` 
 atlasboard new cooldashboardname 
 ```
-
-Start the Dashboard on the port you want (3333 below)
+Change to the root of the new dashboard and get this repo as a submodule.
 ```
 cd cooldashboardname
+git submodule add https://github.com/sytone/atlasboard-openhab-package.git packages/openhab
+```
+Start the Dashboard on the port you want (3333 below)
+```
 atlasboard start 3333
 ```
 
-Open a browser and naviagte to http://localhost:3333/
+Open a browser and naviagte to [http://localhost:3333/](http://localhost:3333/)
 
 
 ## Available Widgets
