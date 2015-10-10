@@ -32,6 +32,9 @@ cd cooldashboardname
 atlasboard start 3333
 ```
 
+Open a browser and naviagte to http://localhost:3333/
+
+
 ## Available Widgets
 
 ### Clock
