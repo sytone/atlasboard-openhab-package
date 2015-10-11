@@ -5,40 +5,82 @@
   "description": "Dashboard for a OpenHAB powered environment.",
 
   "layout": {
-    "customJS" : ["jquery.peity.js","date.format.js"],
-    "widgets" : [
-	  {"row" : 1, "col" : 1, "width" : 1, "height" : 1, "widget" : "dummy",    "job" : "dummy",         "config": "dummy"},
-	  {"row" : 1, "col" : 2, "width" : 1, "height" : 1, "widget" : "clock",    "job" : "clock",         "config": "clock"},
-	  {"row" : 1, "col" : 3, "width" : 1, "height" : 1, "widget" : "imagestream",    "job" : "webcam-image",         "config": "clock"},
-      {"row" : 2, "col" : 1, "width" : 2, "height" : 1, "widget" : "linegraph",    "job" : "sales-graph",         "config": "sales"},
-      {"row" : 2, "col" : 3, "width" : 2, "height" : 2, "widget" : "image",        "job" : "picture-of-the-day",  "config": "picture"},
-      {"row" : 2, "col" : 5, "width" : 2, "height" : 4, "widget" : "quotes",       "job" : "quotes",              "config": "quotes-famous"},
-      {"row" : 3, "col" : 1, "width" : 2, "height" : 3, "widget" : "keyvaluelist", "job" : "issue-types",         "config": "issue-types"},
-      {"row" : 4, "col" : 2, "width" : 2, "height" : 2, "widget" : "calendar",     "job" : "google-calendar",     "config": "calendar-holidays"}
+    "customJS": [
+      "jquery.peity.js",
+      "date.format.js"
+    ],
+    "widgets": [
+      { "row": 1,     "col": 1,     "width": 1,     "height": 1,      "widget": "dummy",        "job": "dummy",         "config": "dummy" },
+      { "row": 1,     "col": 2,     "width": 1,     "height": 1,      "widget": "clock",        "job": "clock",         "config": "clock" },
+      { "row": 1,     "col": 3,     "width": 1,     "height": 1,      "widget": "imagestream",  "job": "webcam-image",  "config": "testimage" },
+      {
+        "row": 2,
+        "col": 1,
+        "width": 2,
+        "height": 1,
+        "widget": "linegraph",
+        "job": "sales-graph",
+        "config": "sales"
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "width": 2,
+        "height": 2,
+        "widget": "image",
+        "job": "picture-of-the-day",
+        "config": "picture"
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "width": 2,
+        "height": 4,
+        "widget": "quotes",
+        "job": "quotes",
+        "config": "quotes-famous"
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "width": 2,
+        "height": 3,
+        "widget": "keyvaluelist",
+        "job": "issue-types",
+        "config": "issue-types"
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "width": 2,
+        "height": 2,
+        "widget": "calendar",
+        "job": "google-calendar",
+        "config": "calendar-holidays"
+      }
     ]
   },
 
-  "config" : {
+  "config": {
     
-   "testimage" : { 
-       "imageUrl" : "http://localhost:3333/images/test.jpg"
-     },
-
-
-	"clock" : {
-	  "interval": 10000,
-	  "hideTitle": true,
+    "testimage": {
+      "imageUrl": "http://localhost:3333/images/test.jpg"
+    },
+    
+    "clock": {
+      "interval": 10000,
+      "hideTitle": true,
       "title": "Current Time",
       "dateFormat": "yyyy/mm/dd",
-	  "timeFormat": "h:MM TT",
-	  "timeZone": 8
-	},
-
-	"dummy" : {
-	  "interval": 10000,
+      "timeFormat": "h:MM TT",
+      "timeZone": 8
+    },
+    
+    "dummy": {
+      "interval": 10000,
       "title": "Hello World",
       "text": "Blah"
-	},
+    },
 
     "calendar-holidays": {
       "interval": 60000,

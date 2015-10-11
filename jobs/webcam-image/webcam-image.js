@@ -14,13 +14,14 @@
  * }
  */
 
-var request = require('request');
+
 
 module.exports = {
     onRun: function (config, dependencies, jobCallback) {
 
+
         if (config.username) {
-            request.get(config.imageUrl, {
+            dependencies.request.get(config.imageUrl, {
                 'auth': {
                     'user': 'username',
                     'pass': 'password',
@@ -28,14 +29,14 @@ module.exports = {
                 }
             }, imageCallback);
         } else {
-            request(config.imageUrl, imageCallback);
+            dependencies.request(config.imageUrl, imageCallback);
         }
 
 
         function imageCallback(error, response, body) {
             if (error) {
                 return console.error('image request failed:', error);
-                jobCallback(errMsg);
+                jobCallback('Unable to access image.');
             }
             jobCallback(null, { response: response, body: body });
         }
