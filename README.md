@@ -22,6 +22,13 @@ npm install -g atlasboard
 ```
 NOTE: Add --msvs_version=2015 to the command above ifyou are running Visual Studio Communitiy 2015 edition. Its free so use it!
 
+ANOTHER NOTE: If you get path to long do ths following. 
+1. Open notepad in Administrator mode. 
+2. Go to location [nodejs installation directory]\node_modules\npm
+3. Open file "npmrc" and change prefix=c:\npm 
+4. Save the file.
+
+
 Navigate to the directory you want the dashboard in. 
 ``` 
 atlasboard new cooldashboardname 
