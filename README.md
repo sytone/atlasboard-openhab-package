@@ -20,6 +20,7 @@ Install Atlasboard by opening the npm console and running the following command.
 ``` 
 npm install -g atlasboard 
 ```
+NOTE: Add --msvs_version=2015 to the command above ifyou are running Visual Studio Communitiy 2015 edition. Its free so use it!
 
 Navigate to the directory you want the dashboard in. 
 ``` 
