@@ -38,6 +38,7 @@ Change to the root of the new dashboard and get this repo as a submodule.
 ```
 cd cooldashboardname
 git init
+git commit --message inital
 git submodule add https://github.com/sytone/atlasboard-openhab-package.git packages/openhab
 ```
 Start the Dashboard on the port you want (3333 below)
