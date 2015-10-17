@@ -1,12 +1,40 @@
 
+<<<<<<< HEAD
+=======
 var fs = require('fs');
 var bufferList = require('bufferlist').BufferList;
 
+>>>>>>> origin/master
 
 
 module.exports = {
     onRun: function (config, dependencies, jobCallback) {
 
+<<<<<<< HEAD
+
+        if (config.username) {
+            dependencies.request.get(config.imageUrl, {
+                'auth': {
+                    'user': 'username',
+                    'pass': 'password',
+                    'sendImmediately': false
+                }
+            }, imageCallback);
+        } else {
+            dependencies.request(config.imageUrl, imageCallback);
+        }
+
+
+        function imageCallback(error, response, body) {
+            if (error) {
+                return console.error('image request failed:', error);
+                jobCallback('Unable to access image.');
+            }
+            jobCallback(null, { response: response, body: body });
+        }
+
+
+=======
         var logger = dependencies.logger;
         var imageFileName = 'packages/' + config.dashboardName + '/widgets/' +  config.widgetName + '/' + config.imageFileName;
         var bl = new BufferList();
@@ -40,5 +68,6 @@ module.exports = {
         var imageSrc = "/widgets/resources?resource=" + config.dashboardName + "/" +  config.widgetName + "/" + config.imageFileName;
         
         stream.on('finish', function () { jobCallback(null, { imageSrc: imageSrc, title: config.imageTitle}); });
+>>>>>>> origin/master
     }
 };

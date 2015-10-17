@@ -4,9 +4,6 @@ widget = {
       $('h2', el).text(data.title);
     }
 
-    $('.content', el).html(
-        "<img class='featured-image' src='" + data.imageSrc + "'/>"
-    );
-
+    $('.featured-image', el).attr("src", data.imageSrc + "&" + new Date().getTime());
   }
 };
