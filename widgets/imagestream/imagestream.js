@@ -4,6 +4,10 @@ widget = {
       $('h2', el).text(data.title);
     }
 
-    $('.featured-image', el).attr("src", data.imageSrc + "&" + new Date().getTime());
+    if(data.useBase64Stream) {
+      $('.featured-image', el).attr("src", data.imageSrc);
+    } else {
+      $('.featured-image', el).attr("src", data.imageSrc + "&" + new Date().getTime());
+    }
   }
 };

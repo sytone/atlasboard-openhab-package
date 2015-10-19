@@ -2,6 +2,7 @@ widget = {
   //runs when we receive data from the job
   onData: function (el, data) {
 
+      var debugOutput = true;
     // Expected Data Items.
     // data.state
     //   The data coming from the open hab state change for display use. 
@@ -63,5 +64,9 @@ widget = {
     }
 
     $('.content', el).html(widgetBody);
+    
+    if(debugOutput) {
+        $('.debugContent', el).html(JSON.stringify(data));
+    }
   }
 };

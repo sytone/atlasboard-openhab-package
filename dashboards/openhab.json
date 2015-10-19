@@ -14,7 +14,7 @@
       {"row" : 1, "col" : 3, "width" : 2, "height" : 2, 
         "widget" : "imagestream",   "job" : "webcam-image",  "config": "testimage"},
       {"row" : 2, "col" : 1, "width" : 2, "height" : 2, 
-        "widget" : "dummy",   "job" : "openhab-bridge",  "config": "openhab-officelamp"},
+        "widget" : "openhabitem",   "job" : "openhab-bridge",  "config": "openhab-officelamp"},
       {"row" : 3, "col" : 1, "width" : 2, "height" : 1, "widget" : "linegraph",    "job" : "sales-graph",         "config": "sales"},
       {"row" : 3, "col" : 3, "width" : 2, "height" : 2, "widget" : "image",        "job" : "picture-of-the-day",  "config": "picture"},
       {"row" : 3, "col" : 5, "width" : 2, "height" : 4, "widget" : "quotes",       "job" : "quotes",              "config": "quotes-famous"},
@@ -30,7 +30,7 @@
       "itemType": "Number",
       "itemName": "Temperature_GF_Corridor", 
       "itemLabel": "Ground Floor Corridor", 
-      "itemBody" : "Temperature [%.1f Â°C]",
+      "itemBody" : "Temperature %.1f °C",
       "displayImageBase": "",
       "displayLabel": true,
       "interval": 60000
