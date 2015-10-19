@@ -1,6 +1,10 @@
 # Atlasboard OpenHAB Package
 Using Atlasboard as a base this is a collection of jobs and widgets to create a dash board for you home and integration with OpenHAB
 
+**NOTE**
+Wiki updates are in progress and this will be moved. 
+
+<https://github.com/sytone/atlasboard-openhab-package/wiki>
 
 ## Installation (If you know how Atlasboard Works)
 
