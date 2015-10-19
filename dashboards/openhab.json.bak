@@ -5,6 +5,61 @@
   "description": "Dashboard for a OpenHAB powered environment.",
 
   "layout": {
+<<<<<<< HEAD
+    "customJS": [
+      "jquery.peity.js",
+      "date.format.js"
+    ],
+    "widgets": [
+      { "row": 1,     "col": 1,     "width": 1,     "height": 1,      "widget": "dummy",        "job": "dummy",         "config": "dummy" },
+      { "row": 1,     "col": 2,     "width": 1,     "height": 1,      "widget": "clock",        "job": "clock",         "config": "clock" },
+      { "row": 1,     "col": 3,     "width": 1,     "height": 1,      "widget": "imagestream",  "job": "webcam-image",  "config": "testimage" },
+      {
+        "row": 2,
+        "col": 1,
+        "width": 2,
+        "height": 1,
+        "widget": "linegraph",
+        "job": "sales-graph",
+        "config": "sales"
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "width": 2,
+        "height": 2,
+        "widget": "image",
+        "job": "picture-of-the-day",
+        "config": "picture"
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "width": 2,
+        "height": 4,
+        "widget": "quotes",
+        "job": "quotes",
+        "config": "quotes-famous"
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "width": 2,
+        "height": 3,
+        "widget": "keyvaluelist",
+        "job": "issue-types",
+        "config": "issue-types"
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "width": 2,
+        "height": 2,
+        "widget": "calendar",
+        "job": "google-calendar",
+        "config": "calendar-holidays"
+      }
+=======
     "customJS" : ["jquery.peity.js","date.format.js","sprintf.js"],
     "widgets" : [
       {"row" : 1, "col" : 1, "width" : 1, "height" : 1, 
@@ -14,23 +69,33 @@
       {"row" : 1, "col" : 3, "width" : 2, "height" : 2, 
         "widget" : "imagestream",   "job" : "webcam-image",  "config": "testimage"},
       {"row" : 2, "col" : 1, "width" : 2, "height" : 2, 
-        "widget" : "openhabitem",   "job" : "openhab-bridge",  "config": "openhab-officelamp"},
+        "widget" : "dummy",   "job" : "openhab-bridge",  "config": "openhab-officelamp"},
       {"row" : 3, "col" : 1, "width" : 2, "height" : 1, "widget" : "linegraph",    "job" : "sales-graph",         "config": "sales"},
       {"row" : 3, "col" : 3, "width" : 2, "height" : 2, "widget" : "image",        "job" : "picture-of-the-day",  "config": "picture"},
       {"row" : 3, "col" : 5, "width" : 2, "height" : 4, "widget" : "quotes",       "job" : "quotes",              "config": "quotes-famous"},
       {"row" : 4, "col" : 1, "width" : 2, "height" : 3, "widget" : "keyvaluelist", "job" : "issue-types",         "config": "issue-types"},
       {"row" : 5, "col" : 2, "width" : 2, "height" : 2, "widget" : "calendar",     "job" : "google-calendar",     "config": "calendar-holidays"}
+>>>>>>> origin/master
     ]
   },
 
   "config": {
     
+<<<<<<< HEAD
+    "testimage": {
+      "imageUrl": "http://localhost:3333/images/test.jpg"
+    },
+    
+    "clock": {
+      "interval": 10000,
+      "hideTitle": true,
+=======
     "openhab-officelamp" : {
       "openhabSimpleAuth": "simplekeycheck",
       "itemType": "Number",
       "itemName": "Temperature_GF_Corridor", 
       "itemLabel": "Ground Floor Corridor", 
-      "itemBody" : "Temperature %.1f °C",
+      "itemBody" : "Temperature [%.1f Â°C]",
       "displayImageBase": "",
       "displayLabel": true,
       "interval": 60000
@@ -51,6 +116,7 @@
 	"clock" : {
 	  "interval": 10000,
 	  "hideTitle": true,
+>>>>>>> origin/master
       "title": "Current Time",
       "dateFormat": "yyyy/mm/dd",
       "timeFormat": "h:MM TT",
