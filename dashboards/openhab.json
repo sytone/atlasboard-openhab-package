@@ -12,7 +12,13 @@
       {"row" : 1, "col" : 2, "width" : 1, "height" : 1, 
         "widget" : "openhabitem",   "job" : "openhab-bridge",  "config": "openhab-officelamp"},
       {"row" : 1, "col" : 3, "width" : 1, "height" : 1, 
-        "widget" : "openhabitem",   "job" : "openhab-bridge",  "config": "openhab-dininglamp"}
+        "widget" : "openhabitem",   "job" : "openhab-bridge",  "config": "openhab-loungeceiling"},
+      {"row" : 1, "col" : 4, "width" : 1, "height" : 1, 
+        "widget" : "openhabitem",   "job" : "openhab-bridge",  "config": "openhab-barceiling"},
+      {"row" : 1, "col" : 5, "width" : 1, "height" : 1, 
+        "widget" : "openhabitem",   "job" : "openhab-bridge",  "config": "openhab-kitchentable"},
+      {"row" : 2, "col" : 1, "width" : 2, "height" : 2, 
+        "widget" : "image", "job" : "picture-of-the-day",  "config": "picture"}
     ]
   },
 
@@ -30,18 +36,41 @@
       "openHabRestEndpoint": "http://homeinterchange:8080/"
         
     },
-    
-    "openhab-dininglamp" : {
+    "openhab-loungeceiling" : {
       "openhabSimpleAuth": "simplekeycheck",
       "itemType": "Switch",
-      "itemName": "Light_GF_Dining_SideLamp", 
-      "itemLabel": "Dining Lamp", 
+      "itemName": "Light_GF_Lounge_Ceiling", 
+      "itemLabel": "Lounge Ceiling", 
       "itemBody" : "%s",
       "displayImageBase": "",
       "displayLabel": true,
       "interval": 5000,
       "openHabRestEndpoint": "http://homeinterchange:8080/" 
     },
+    "openhab-barceiling" : {
+      "openhabSimpleAuth": "simplekeycheck",
+      "itemType": "Switch",
+      "itemName": "Light_GF_Bar_Lights", 
+      "itemLabel": "Bar Ceiling", 
+      "itemBody" : "%s",
+      "displayImageBase": "",
+      "displayLabel": true,
+      "interval": 5000,
+      "openHabRestEndpoint": "http://homeinterchange:8080/" 
+    },
+    "openhab-kitchentable" : {
+      "openhabSimpleAuth": "simplekeycheck",
+      "itemType": "Switch",
+      "itemName": "Light_GF_Kitchen_Table", 
+      "itemLabel": "Kitchen Table", 
+      "itemBody" : "%s",
+      "displayImageBase": "",
+      "displayLabel": true,
+      "interval": 5000,
+      "openHabRestEndpoint": "http://homeinterchange:8080/" 
+    },    
+    
+    
 	"clock" : {
 	  "interval": 10000,
 	  "hideTitle": true,

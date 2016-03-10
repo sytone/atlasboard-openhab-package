@@ -67,6 +67,7 @@ widget = {
             }
             
             $('.content', el).hide();
+            $('.switch-light > input', el).unbind( 'change' );
             $('.switch-light > input', el).on('change', function() {
                 if ($(this).is(':checked')) {
                     stateChangeOption = 'ON'; 
