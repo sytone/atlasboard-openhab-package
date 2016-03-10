@@ -10,6 +10,10 @@ Wiki updates are in progress and this will be moved.
 
 From the root directory of your **recently created wallboard**, you just need to type:
 
+    git clone https://github.com/sytone/atlasboard-openhab-package.git packages/openhab
+
+If you are working on atlasboard code as well you can pull in as sub module.
+
     git submodule add https://github.com/sytone/atlasboard-openhab-package.git packages/openhab
 
 to import the package as **git submodule** and use any of the widgets and jobs in this package (check the example dashboard **openhab** to see how).
@@ -41,20 +45,52 @@ atlasboard new cooldashboardname
 Change to the root of the new dashboard and get this repo as a submodule.
 ```
 cd cooldashboardname
+```
+If you just want this dashboard:
+
+    git clone https://github.com/sytone/atlasboard-openhab-package.git packages/openhab
+
+If you are working on atlasboard code as well you can pull in as sub module:
+```
 git init
 git commit --message inital
 git submodule add https://github.com/sytone/atlasboard-openhab-package.git packages/openhab
 ```
-Start the Dashboard on the port you want (3333 below)
+
+Start the Dashboard on the port you want (3000 below)
 ```
-atlasboard start 3333
+atlasboard start 
 ```
 
-Open a browser and naviagte to [http://localhost:3333/](http://localhost:3333/)
+Open a browser and naviagte to [http://localhost:3000/](http://localhost:3000/)
 
 
 ## Available Widgets
 
+### OpenHAB Item - Switch Configuration
+This widget is backed by the openhab-bridge job. 
+
+![](screenshots/openhabitem-switch.png?raw=true)
+
+#### Dashboard Configuration
+In the widgets collection.
+```
+      {"row" : 2, "col" : 1, "width" : 1, "height" : 1, 
+        "widget" : "openhabitem",   "job" : "openhab-bridge",  "config": "openhab-officelamp"},
+```
+In the config section.
+```
+    "openhab-officelamp" : {
+      "openhabSimpleAuth": "simplekeycheck",
+      "itemType": "Switch",
+      "itemName": "Light_FF_Office_Lamp_ISY", 
+      "itemLabel": "Office Lamp", 
+      "itemBody" : "%s",
+      "displayImageBase": "",
+      "displayLabel": true,
+      "interval": 5000,
+      "openHabRestEndpoint": "http://homeinterchange:8080/"
+```      
 ### Clock
 Shows the date and time. Really, thats all...
 
