@@ -64,6 +64,11 @@ atlasboard start
 
 Open a browser and naviagte to [http://localhost:3000/](http://localhost:3000/)
 
+## Screen Shots
+
+Not much at the moment. :)
+
+![](screenshots/SimpleSwitchesPage.png?raw=true)
 
 ## Available Widgets
 
