@@ -1,23 +1,19 @@
 /**
- * Test file for Job: dummy
+ * Test file for Job: adtscanner
  */
 
 var assert = require ('assert');
-dummySUT = require('../dummy');
+var adtscannerSUT = require('../adtscanner');
 
 var mockedConfig, mockedDependencies;
 
-describe ('dummy test', function(){
+describe ('adtscanner test', function(){
 
   beforeEach(function (done) {
     
     mockedConfig = {
-      globalAuth: {
-        myconfigKey: {
-          username: "myusername",
-          password: "secretpassword"
-        }
-      },
+      username: "myusername",
+      password: "secretpassword",
       interval: 20000
     };
 
@@ -26,21 +22,23 @@ describe ('dummy test', function(){
       easyRequest : {
         JSON : function (options, cb) {
           cb(null, {});
+        },
+        HTML : function (options, cb){
+        cb(null, 'hello from google');
         }
       }
     };
 
     done();
   });
-
-
+  
 
   describe ('config checks', function(){
     it('should check for valid credentials', function (done){
-      // there are some nice examples of how to unit tests configuration handling
-      // in the Atlassian package:
-      // https://bitbucket.org/atlassian/atlasboard-atlassian-package/src/master/jobs
-      done();
+      adtscannerSUT.onRun(mockedConfig, mockedDependencies, function(err, data){
+        assert.ifError(err);
+        done();
+      });        
     });
   });
 
@@ -51,8 +49,7 @@ describe ('dummy test', function(){
         cb(null, 'hello from google');
       };
 
-      var config = {};
-      dummySUT.onRun(config, mockedDependencies, function(err, data){
+      adtscannerSUT.onRun(mockedConfig, mockedDependencies, function(err, data){
         assert.equal('hello from google', data.html, 'expected a different reply from google: ' + data.html);
         done();
       });

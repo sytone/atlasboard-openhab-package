@@ -33,10 +33,7 @@ describe ('openhab-bridge test', function(){
     done();
   });
 
-  it('should have tests :D', function (done){
-    assert.ok(false, 'we don\'t have any tests :(');
-    done();
-  });
+
 
   describe ('config checks', function(){
     it('should check for valid credentials', function (done){
