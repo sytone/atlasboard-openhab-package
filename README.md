@@ -79,12 +79,12 @@ This widget is backed by the openhab-bridge job.
 
 #### Dashboard Configuration
 In the widgets collection.
-```
+```JSON
       {"row" : 2, "col" : 1, "width" : 1, "height" : 1, 
         "widget" : "openhabitem",   "job" : "openhab-bridge",  "config": "openhab-officelamp"},
 ```
 In the config section.
-```
+```JSON
     "openhab-officelamp" : {
       "openhabSimpleAuth": "simplekeycheck",
       "itemType": "Switch",
